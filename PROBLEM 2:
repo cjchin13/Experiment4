@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int A, B, C, Y, Z, arr[200];
+	
+	cout << "What is your desired array size? : "; cin >> A;
+	cout << "What are the " << A << " elements? : " << endl;
+	
+	for (Z = 0; Z < A; Z++)
+	{
+		cin >> arr[Z];
+	}
+	
+	cout << "Here are your elements : " << endl;
+	
+	for (Z = 0; Z < A; Z++)
+	{
+		cout << arr[Z] << ", ";
+	}
+	
+	cout << endl;
+	
+	for (Z = 0; Z < A; Z++)
+	{
+		for (Y = Z + 1; Y < A ; Y++)
+		{
+			if (arr[Z] > arr[Y])
+			{
+				C = arr[Y];
+				arr[Y] = arr[Z];
+				arr[Z] = C;
+			}
+		}
+	}
+	
+	cout << endl;
+	
+	cout << "Here are the elements after using selection sort : ";
+	
+	for (Z = 0; Z < A; Z++)
+	{
+		cout << arr[Z] << ", ";
+	}
+	
+	_getch();
+	return 0;
+}
