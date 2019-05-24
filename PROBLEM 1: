@@ -1,0 +1,134 @@
+#include <iostream>
+#include <conio.h>
+#include <cmath>
+
+using namespace std;
+
+		float addition (float A, float B)
+		{
+			float V;
+			V = A + B;
+			
+			return V;
+		}
+		
+		float subtraction (float A, float B)
+		{
+			float W;
+			W = A - B;
+			
+			return W;
+		}
+	
+		float multiplication (float A, float B)
+		{
+			float X;
+			X = A * B;
+			
+			return X;
+		}
+		
+		float division (float A, float B)
+		{
+			float Y;
+			Y = A / B;
+			
+			return Y;
+		}
+		
+		int mod (int A, int B)
+		{
+			float Z;
+			Z = A % B;
+			
+			return Z;
+		}
+
+	
+	int main()
+	{
+		float A, B;
+		int C;
+		char D = 'y';
+			
+		while (D == 'y')
+		{
+			cout << "MENU: " << endl;
+			cout << "	1. Add" << endl;
+			cout << "	2. Subtract" << endl;
+			cout << "	3. Multiply" << endl;
+			cout << "	4. Divide" << endl;
+			cout << "	5. Modulus" << endl;
+			
+			cout << "\nWhat is your choice? : "; cin >> C;
+			cout << "What is the first number? : "; cin >> A;
+			cout << "What is the second number? : "; cin >> B;
+			
+			cout << endl;
+			
+			switch (C)
+			{
+				case 1:
+					{
+						cout << "Result : " << addition (A, B) << endl;
+						break;
+					}
+					
+				case 2:
+					{
+						cout << "Result : " << subtraction (A, B) << endl;
+						break;
+					}
+					
+				case 3:
+					{
+						cout << "Result : " << multiplication (A, B) << endl;
+						break;
+					}
+					
+				case 4:
+					{
+						cout << "Result : " << division (A, B) << endl;
+						break;
+					}
+					
+				case 5:
+					{
+						cout << "Result : " << mod (A, B) << endl;
+						break;
+					}
+					
+				default:
+					{
+						cout << "Error! Your choice is not in the MENU." << endl;
+						break;
+					}
+					
+			}
+			
+		cout << endl;
+			
+		cout << "Continue? (press y if yes, and n if no)" << endl;
+		cin >> D;
+		cout << endl;
+			
+		switch (D)
+			{
+				case 'y':
+					{
+						continue;
+					}
+				
+				default:
+					{
+						break;
+					}
+				
+			}
+		
+		}
+		
+		_getch();
+		return 0;
+		
+	}
